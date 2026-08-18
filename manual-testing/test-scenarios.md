@@ -124,3 +124,117 @@ The current Login scenarios provide planned coverage for:
 At this stage, each documented Login requirement is mapped to at least one test scenario.
 
 Detailed test cases will provide the actual test data, execution steps, and expected results.
+# MOD-02 — Product Listing & Sorting
+
+## Scenario Coverage
+
+| Scenario ID | Related Requirement(s) | Test Scenario | Test Type | Priority |
+|---|---|---|---|---|
+| TS-PROD-001 | REQ-PROD-001 | Verify that available products are displayed after successful authentication. | Positive / Functional | High |
+| TS-PROD-002 | REQ-PROD-002 | Verify that each product listing provides sufficient identifying product information. | Positive / UI Functional | Medium |
+| TS-PROD-003 | REQ-PROD-003, REQ-PROD-005 | Verify that a user can add a product to the cart from the product listing and that the cart indicator is updated. | Positive / Functional | High |
+| TS-PROD-004 | REQ-PROD-004, REQ-PROD-005 | Verify that a previously added product can be removed from the product listing and that the cart indicator is updated. | Positive / Functional | High |
+| TS-PROD-005 | REQ-PROD-003, REQ-PROD-005 | Verify cart-indicator behavior when multiple products are added from the product listing. | Positive / Functional | High |
+| TS-PROD-006 | REQ-PROD-004, REQ-PROD-005 | Verify cart-indicator behavior when one product is removed while other products remain selected. | Positive / Functional | High |
+| TS-PROD-007 | REQ-PROD-006 | Verify that products can be sorted alphabetically from A to Z. | Functional / Sorting | Medium |
+| TS-PROD-008 | REQ-PROD-007 | Verify that products can be sorted alphabetically from Z to A. | Functional / Sorting | Medium |
+| TS-PROD-009 | REQ-PROD-008 | Verify that products can be sorted by price from lowest to highest. | Functional / Sorting | Medium |
+| TS-PROD-010 | REQ-PROD-009 | Verify that products can be sorted by price from highest to lowest. | Functional / Sorting | Medium |
+
+---
+
+## Scenario Design Rationale
+
+The Product Listing scenarios provide coverage of three primary behavior groups.
+
+### Product Presentation
+
+The application should display available products and provide enough information for a user to identify each item.
+
+Covered by:
+
+`TS-PROD-001`  
+`TS-PROD-002`
+
+### Product Selection and Cart Indicator
+
+Users should be able to add and remove products directly from the inventory page.
+
+The shopping-cart indicator should remain consistent with the number of currently selected products.
+
+Covered by:
+
+`TS-PROD-003`  
+`TS-PROD-004`  
+`TS-PROD-005`  
+`TS-PROD-006`
+
+### Product Sorting
+
+The product list should support the available name and price sorting options.
+
+Covered by:
+
+`TS-PROD-007`  
+`TS-PROD-008`  
+`TS-PROD-009`  
+`TS-PROD-010`
+
+---
+
+## Test Design Techniques
+
+### Equivalence Partitioning
+
+Sorting behavior is divided into representative sorting modes:
+
+- Name ascending
+- Name descending
+- Price ascending
+- Price descending
+
+Each available sorting mode represents a distinct behavioral partition.
+
+### State Transition Testing
+
+Product-selection behavior changes the cart state.
+
+Example:
+
+`Cart = 0`
+
+→ Add Product A
+
+→ `Cart = 1`
+
+→ Add Product B
+
+→ `Cart = 2`
+
+→ Remove Product A
+
+→ `Cart = 1`
+
+These transitions will be verified through the cart indicator.
+
+### Workflow-Based Testing
+
+Product-listing tests also verify the interaction between product selection and the shopping-cart state without yet testing the complete Shopping Cart module.
+
+---
+
+## Requirement Coverage
+
+The Product Listing & Sorting scenarios provide planned coverage for:
+
+- `REQ-PROD-001`
+- `REQ-PROD-002`
+- `REQ-PROD-003`
+- `REQ-PROD-004`
+- `REQ-PROD-005`
+- `REQ-PROD-006`
+- `REQ-PROD-007`
+- `REQ-PROD-008`
+- `REQ-PROD-009`
+
+Detailed test cases will provide test data, execution steps, and expected results.
