@@ -238,3 +238,31 @@ The Product Listing & Sorting scenarios provide planned coverage for:
 - `REQ-PROD-009`
 
 Detailed test cases will provide test data, execution steps, and expected results.
+# MOD-03 — Product Details
+
+## Scenario Coverage
+
+| Scenario ID | Related Requirement(s) | Test Scenario | Test Type | Priority |
+|---|---|---|---|---|
+| TS-PDETAIL-001 | REQ-PDETAIL-001 | Verify that a user can open an individual product from the product listing. | Positive / Functional | Medium |
+| TS-PDETAIL-002 | REQ-PDETAIL-002 | Verify that the product details page displays information corresponding to the selected product. | Positive / Functional | Medium |
+| TS-PDETAIL-003 | REQ-PDETAIL-003 | Verify that a product can be added to the shopping cart from the product details page. | Positive / Functional | High |
+| TS-PDETAIL-004 | REQ-PDETAIL-004 | Verify that an added product can be removed from the product details page. | Positive / Functional | High |
+| TS-PDETAIL-005 | REQ-PDETAIL-005 | Verify that the user can return from the product details page to the product listing. | Positive / Navigation | Medium |
+| TS-PDETAIL-006 | REQ-PDETAIL-002 | Verify that different selected products display their corresponding product information. | Data Consistency / Functional | Medium |
+
+---
+
+## Scenario Design Rationale
+
+The Product Details scenarios validate navigation into an individual product, consistency between the selected product and displayed information, cart actions from the details page, and return navigation.
+
+## Requirement Coverage
+
+The Product Details scenarios provide planned coverage for:
+
+- REQ-PDETAIL-001
+- REQ-PDETAIL-002
+- REQ-PDETAIL-003
+- REQ-PDETAIL-004
+- REQ-PDETAIL-005
