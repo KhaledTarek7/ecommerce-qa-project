@@ -266,3 +266,133 @@ The Product Details scenarios provide planned coverage for:
 - REQ-PDETAIL-003
 - REQ-PDETAIL-004
 - REQ-PDETAIL-005
+# MOD-04 — Shopping Cart
+
+## Scenario Coverage
+
+| Scenario ID | Related Requirement(s) | Test Scenario | Test Type | Priority |
+|---|---|---|---|---|
+| TS-CART-001 | REQ-CART-001 | Verify that a product added from the product listing is displayed in the shopping cart. | Positive / Functional | High |
+| TS-CART-002 | REQ-CART-001, REQ-CART-002 | Verify that multiple selected products are displayed correctly in the shopping cart. | Positive / Functional | High |
+| TS-CART-003 | REQ-CART-002 | Verify that product information displayed in the cart corresponds to the selected product. | Data Consistency / Functional | High |
+| TS-CART-004 | REQ-CART-003 | Verify that a product can be removed directly from the shopping cart. | Positive / Functional | High |
+| TS-CART-005 | REQ-CART-003, REQ-CART-006 | Verify that one product can be removed while other selected products remain in the cart. | State Transition / Functional | High |
+| TS-CART-006 | REQ-CART-004 | Verify that the user can return from the shopping cart to product browsing. | Navigation / Functional | Medium |
+| TS-CART-007 | REQ-CART-005 | Verify that the user can proceed from the shopping cart to the checkout workflow. | Positive / Functional | High |
+| TS-CART-008 | REQ-CART-006 | Verify that shopping-cart contents remain consistent when navigating between the Products page and the Cart page. | State Persistence / Functional | High |
+| TS-CART-009 | REQ-CART-001, REQ-CART-006 | Verify the behavior of the shopping cart when no products have been selected. | Edge Case / Functional | Medium |
+
+---
+
+## Scenario Design Rationale
+
+The Shopping Cart scenarios validate product visibility, data consistency, item removal, navigation, checkout entry, and cart-state consistency.
+
+### Cart Content Validation
+
+The shopping cart should accurately represent products selected by the user.
+
+Covered by:
+
+`TS-CART-001`  
+`TS-CART-002`  
+`TS-CART-003`
+
+### Cart Modification
+
+Users should be able to remove selected products while maintaining the correct state of any remaining items.
+
+Covered by:
+
+`TS-CART-004`  
+`TS-CART-005`
+
+### Navigation and Checkout
+
+The cart acts as an intermediate stage between product browsing and checkout.
+
+Covered by:
+
+`TS-CART-006`  
+`TS-CART-007`
+
+### Cart State Persistence
+
+Cart contents should remain consistent during normal application navigation unless the user explicitly removes an item or resets the application state.
+
+Covered by:
+
+`TS-CART-008`
+
+### Empty Cart Behavior
+
+The shopping cart should also be evaluated when no products have been selected.
+
+Covered by:
+
+`TS-CART-009`
+
+---
+
+## Test Design Techniques
+
+### State Transition Testing
+
+Shopping-cart behavior involves transitions between different cart states.
+
+Example:
+
+`Cart = 0`
+
+→ Add Product A
+
+→ `Cart = 1`
+
+→ Add Product B
+
+→ `Cart = 2`
+
+→ Remove Product A
+
+→ `Cart = 1`
+
+→ Remove Product B
+
+→ `Cart = 0`
+
+### Workflow-Based Testing
+
+Shopping-cart testing validates interaction across multiple functional areas:
+
+Products
+
+→ Shopping Cart
+
+→ Continue Shopping
+
+→ Shopping Cart
+
+→ Checkout
+
+### Positive Testing
+
+Valid user workflows such as adding products, reviewing the cart, and proceeding to checkout will be verified.
+
+### Edge-Case Testing
+
+The shopping cart will also be evaluated when it contains no selected products.
+
+---
+
+## Requirement Coverage
+
+The Shopping Cart scenarios provide planned coverage for:
+
+- `REQ-CART-001`
+- `REQ-CART-002`
+- `REQ-CART-003`
+- `REQ-CART-004`
+- `REQ-CART-005`
+- `REQ-CART-006`
+
+Detailed test cases will provide test data, execution steps, and expected results.
