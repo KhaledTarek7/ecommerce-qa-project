@@ -396,3 +396,106 @@ The Shopping Cart scenarios provide planned coverage for:
 - `REQ-CART-006`
 
 Detailed test cases will provide test data, execution steps, and expected results.
+# MOD-05 — Checkout Customer Information
+
+## Scenario Coverage
+
+| Scenario ID | Related Requirement(s) | Test Scenario | Test Type | Priority |
+|---|---|---|---|---|
+| TS-CHKINFO-001 | REQ-CHKINFO-001, REQ-CHKINFO-002, REQ-CHKINFO-003, REQ-CHKINFO-006 | Verify successful checkout progression when valid customer information is provided. | Positive / Functional | High |
+| TS-CHKINFO-002 | REQ-CHKINFO-004, REQ-CHKINFO-005 | Verify validation when First Name is missing. | Negative / Validation | High |
+| TS-CHKINFO-003 | REQ-CHKINFO-004, REQ-CHKINFO-005 | Verify validation when Last Name is missing. | Negative / Validation | High |
+| TS-CHKINFO-004 | REQ-CHKINFO-004, REQ-CHKINFO-005 | Verify validation when Postal Code is missing. | Negative / Validation | High |
+| TS-CHKINFO-005 | REQ-CHKINFO-004, REQ-CHKINFO-005 | Verify validation when all customer information fields are empty. | Negative / Validation | High |
+| TS-CHKINFO-006 | REQ-CHKINFO-001, REQ-CHKINFO-002, REQ-CHKINFO-003 | Verify that valid customer information can be entered into all required fields. | Positive / Functional | Medium |
+| TS-CHKINFO-007 | REQ-CHKINFO-007 | Verify that Cancel returns the user from checkout information to the shopping cart. | Navigation / Functional | High |
+| TS-CHKINFO-008 | REQ-CHKINFO-004, REQ-CHKINFO-005 | Verify validation when only First Name is entered. | Negative / Validation | Medium |
+| TS-CHKINFO-009 | REQ-CHKINFO-004, REQ-CHKINFO-005 | Verify validation when First Name and Last Name are entered but Postal Code is missing. | Negative / Validation | Medium |
+
+---
+
+## Scenario Design Rationale
+
+The Checkout Customer Information scenarios validate required-field behavior, successful data entry, negative validation, error handling, and navigation back to the cart.
+
+### Successful Customer Information Entry
+
+Covered by:
+
+`TS-CHKINFO-001`  
+`TS-CHKINFO-006`
+
+### Required Field Validation
+
+Covered by:
+
+`TS-CHKINFO-002`  
+`TS-CHKINFO-003`  
+`TS-CHKINFO-004`  
+`TS-CHKINFO-005`  
+`TS-CHKINFO-008`  
+`TS-CHKINFO-009`
+
+### Navigation
+
+Covered by:
+
+`TS-CHKINFO-007`
+
+---
+
+## Test Design Techniques
+
+### Equivalence Partitioning
+
+Input states are divided into valid and invalid classes.
+
+Examples:
+
+- All required fields valid
+- Missing First Name
+- Missing Last Name
+- Missing Postal Code
+- All required fields empty
+
+### Negative Testing
+
+Incomplete customer information is intentionally submitted to confirm that the application prevents invalid progression.
+
+### Workflow Testing
+
+The module is tested as part of the checkout workflow:
+
+Products
+
+→ Shopping Cart
+
+→ Checkout Customer Information
+
+→ Checkout Overview
+
+and:
+
+Shopping Cart
+
+→ Checkout Customer Information
+
+→ Cancel
+
+→ Shopping Cart
+
+---
+
+## Requirement Coverage
+
+The Checkout Customer Information scenarios provide planned coverage for:
+
+- `REQ-CHKINFO-001`
+- `REQ-CHKINFO-002`
+- `REQ-CHKINFO-003`
+- `REQ-CHKINFO-004`
+- `REQ-CHKINFO-005`
+- `REQ-CHKINFO-006`
+- `REQ-CHKINFO-007`
+
+Detailed test cases will provide test data, execution steps, and expected results.
