@@ -499,3 +499,96 @@ The Checkout Customer Information scenarios provide planned coverage for:
 - `REQ-CHKINFO-007`
 
 Detailed test cases will provide test data, execution steps, and expected results.
+# MOD-06 — Checkout Order Overview
+
+## Scenario Coverage
+
+| Scenario ID | Related Requirement(s) | Test Scenario | Test Type | Priority |
+|---|---|---|---|---|
+| TS-CHKOV-001 | REQ-CHKOV-001 | Verify that selected products are displayed on the checkout overview page. | Positive / Functional | High |
+| TS-CHKOV-002 | REQ-CHKOV-002 | Verify that product pricing on the checkout overview corresponds to the selected products. | Data Consistency / Functional | High |
+| TS-CHKOV-003 | REQ-CHKOV-003 | Verify that the item subtotal corresponds to the sum of selected product prices. | Calculation / Functional | High |
+| TS-CHKOV-004 | REQ-CHKOV-004 | Verify that tax is displayed separately on the checkout overview. | Calculation / Functional | High |
+| TS-CHKOV-005 | REQ-CHKOV-003, REQ-CHKOV-004, REQ-CHKOV-005 | Verify that the final total corresponds to item subtotal plus tax. | Calculation / Functional | High |
+| TS-CHKOV-006 | REQ-CHKOV-006 | Verify that the user can finish the order from the checkout overview. | Positive / Workflow | High |
+| TS-CHKOV-007 | REQ-CHKOV-007 | Verify that the user can cancel from the checkout overview without completing the order. | Navigation / Functional | High |
+
+---
+
+## Scenario Design Rationale
+
+The Checkout Order Overview scenarios validate order contents, product pricing, financial calculations, and user actions available before final order submission.
+
+### Order Content Validation
+
+Covered by:
+
+`TS-CHKOV-001`  
+`TS-CHKOV-002`
+
+### Calculation Validation
+
+Covered by:
+
+`TS-CHKOV-003`  
+`TS-CHKOV-004`  
+`TS-CHKOV-005`
+
+### Checkout Workflow
+
+Covered by:
+
+`TS-CHKOV-006`  
+`TS-CHKOV-007`
+
+---
+
+## Test Design Techniques
+
+### Data Consistency Testing
+
+Products and prices shown during checkout should correspond to the products selected earlier in the shopping workflow.
+
+### Calculation Testing
+
+The following relationship will be validated:
+
+Item Subtotal
+
++
+
+Tax
+
+=
+
+Final Total
+
+### Workflow Testing
+
+The checkout overview is tested within the complete purchasing workflow:
+
+Products
+
+→ Shopping Cart
+
+→ Checkout Customer Information
+
+→ Checkout Order Overview
+
+→ Order Completion
+
+---
+
+## Requirement Coverage
+
+The Checkout Order Overview scenarios provide planned coverage for:
+
+- `REQ-CHKOV-001`
+- `REQ-CHKOV-002`
+- `REQ-CHKOV-003`
+- `REQ-CHKOV-004`
+- `REQ-CHKOV-005`
+- `REQ-CHKOV-006`
+- `REQ-CHKOV-007`
+
+Detailed test cases will provide test data, execution steps, and expected results.
