@@ -1,0 +1,51 @@
+﻿Requirement ID,Module ID,Module,Requirement,Jira Key,Jira Story,Scenario ID(s),Test Case ID(s),Manual Coverage,Manual Result
+REQ-LOGIN-001,MOD-01,Authentication / Login,Login page provides username and password fields.,SDQA-3,User Authentication and Login,TS-LOGIN-001,TC-LOGIN-001,Covered,Pass
+REQ-LOGIN-002,MOD-01,Authentication / Login,Valid credentials authenticate the user successfully.,SDQA-3,User Authentication and Login,TS-LOGIN-001,TC-LOGIN-001,Covered,Pass
+REQ-LOGIN-003,MOD-01,Authentication / Login,Invalid credentials are rejected.,SDQA-3,User Authentication and Login,"TS-LOGIN-002, TS-LOGIN-003, TS-LOGIN-004","TC-LOGIN-002, TC-LOGIN-003, TC-LOGIN-004",Covered,Pass
+REQ-LOGIN-004,MOD-01,Authentication / Login,Login is prevented when username is missing.,SDQA-3,User Authentication and Login,"TS-LOGIN-005, TS-LOGIN-007","TC-LOGIN-005, TC-LOGIN-007",Covered,Pass
+REQ-LOGIN-005,MOD-01,Authentication / Login,Login is prevented when password is missing.,SDQA-3,User Authentication and Login,"TS-LOGIN-006, TS-LOGIN-007","TC-LOGIN-006, TC-LOGIN-007",Covered,Pass
+REQ-LOGIN-006,MOD-01,Authentication / Login,Authentication failures display an appropriate error message.,SDQA-3,User Authentication and Login,"TS-LOGIN-002, TS-LOGIN-003, TS-LOGIN-004, TS-LOGIN-005, TS-LOGIN-006, TS-LOGIN-007, TS-LOGIN-008","TC-LOGIN-002, TC-LOGIN-003, TC-LOGIN-004, TC-LOGIN-005, TC-LOGIN-006, TC-LOGIN-007, TC-LOGIN-008",Covered,Pass
+REQ-LOGIN-007,MOD-01,Authentication / Login,Locked-out users cannot access the application.,SDQA-3,User Authentication and Login,TS-LOGIN-008,TC-LOGIN-008,Covered,Pass
+REQ-PROD-001,MOD-02,Product Listing & Sorting,Products are displayed after successful authentication.,SDQA-4,Product Listing and Sorting,TS-PROD-001,TC-PROD-001,Covered,Pass
+REQ-PROD-002,MOD-02,Product Listing & Sorting,Each product displays identifying information.,SDQA-4,Product Listing and Sorting,TS-PROD-002,TC-PROD-002,Covered,Pass
+REQ-PROD-003,MOD-02,Product Listing & Sorting,A product can be added from the product listing.,SDQA-4,Product Listing and Sorting,"TS-PROD-003, TS-PROD-005","TC-PROD-003, TC-PROD-005",Covered,Pass
+REQ-PROD-004,MOD-02,Product Listing & Sorting,An added product can be removed from the product listing.,SDQA-4,Product Listing and Sorting,"TS-PROD-004, TS-PROD-006","TC-PROD-004, TC-PROD-006",Covered,Pass
+REQ-PROD-005,MOD-02,Product Listing & Sorting,The cart indicator reflects the number of selected products.,SDQA-4,Product Listing and Sorting,"TS-PROD-003, TS-PROD-004, TS-PROD-005, TS-PROD-006","TC-PROD-003, TC-PROD-004, TC-PROD-005, TC-PROD-006",Covered,Pass
+REQ-PROD-006,MOD-02,Product Listing & Sorting,Products can be sorted by name A to Z.,SDQA-4,Product Listing and Sorting,TS-PROD-007,TC-PROD-007,Covered,Pass
+REQ-PROD-007,MOD-02,Product Listing & Sorting,Products can be sorted by name Z to A.,SDQA-4,Product Listing and Sorting,TS-PROD-008,TC-PROD-008,Covered,Pass
+REQ-PROD-008,MOD-02,Product Listing & Sorting,Products can be sorted by price low to high.,SDQA-4,Product Listing and Sorting,TS-PROD-009,TC-PROD-009,Covered,Pass
+REQ-PROD-009,MOD-02,Product Listing & Sorting,Products can be sorted by price high to low.,SDQA-4,Product Listing and Sorting,TS-PROD-010,TC-PROD-010,Covered,Pass
+REQ-PDETAIL-001,MOD-03,Product Details,An individual product details page can be opened from the product listing.,SDQA-5,Product Details,TS-PDETAIL-001,TC-PDETAIL-001,Covered,Pass
+REQ-PDETAIL-002,MOD-03,Product Details,The details page corresponds to the selected product.,SDQA-5,Product Details,"TS-PDETAIL-002, TS-PDETAIL-006","TC-PDETAIL-002, TC-PDETAIL-006",Covered,Pass
+REQ-PDETAIL-003,MOD-03,Product Details,A product can be added to the cart from its details page.,SDQA-5,Product Details,TS-PDETAIL-003,TC-PDETAIL-003,Covered,Pass
+REQ-PDETAIL-004,MOD-03,Product Details,An added product can be removed from its details page.,SDQA-5,Product Details,TS-PDETAIL-004,TC-PDETAIL-004,Covered,Pass
+REQ-PDETAIL-005,MOD-03,Product Details,The user can return from product details to the product listing.,SDQA-5,Product Details,TS-PDETAIL-005,TC-PDETAIL-005,Covered,Pass
+REQ-CART-001,MOD-04,Shopping Cart,The cart displays products added by the user.,SDQA-6,Shopping Cart,"TS-CART-001, TS-CART-002","TC-CART-001, TC-CART-002",Covered,Pass
+REQ-CART-002,MOD-04,Shopping Cart,Cart item information corresponds to the selected products.,SDQA-6,Shopping Cart,"TS-CART-002, TS-CART-003","TC-CART-002, TC-CART-003",Covered,Pass
+REQ-CART-003,MOD-04,Shopping Cart,Products can be removed directly from the shopping cart.,SDQA-6,Shopping Cart,"TS-CART-004, TS-CART-005","TC-CART-004, TC-CART-005",Covered,Pass
+REQ-CART-004,MOD-04,Shopping Cart,The user can return from the cart to product browsing.,SDQA-6,Shopping Cart,TS-CART-006,TC-CART-006,Covered,Pass
+REQ-CART-005,MOD-04,Shopping Cart,The user can proceed from the cart to checkout.,SDQA-6,Shopping Cart,TS-CART-007,TC-CART-007,Covered,Pass
+REQ-CART-006,MOD-04,Shopping Cart,Cart contents remain consistent during normal navigation unless changed or reset.,SDQA-6,Shopping Cart,"TS-CART-005, TS-CART-008","TC-CART-005, TC-CART-008",Covered,Pass
+REQ-CHKINFO-001,MOD-05,Checkout — Customer Information,The checkout information page provides a First Name field.,SDQA-7,Checkout — Customer Information,"TS-CHKINFO-001, TS-CHKINFO-006","TC-CHKINFO-001, TC-CHKINFO-006",Covered,Pass
+REQ-CHKINFO-002,MOD-05,Checkout — Customer Information,The checkout information page provides a Last Name field.,SDQA-7,Checkout — Customer Information,"TS-CHKINFO-001, TS-CHKINFO-006","TC-CHKINFO-001, TC-CHKINFO-006",Covered,Pass
+REQ-CHKINFO-003,MOD-05,Checkout — Customer Information,The checkout information page provides a Postal Code field.,SDQA-7,Checkout — Customer Information,"TS-CHKINFO-001, TS-CHKINFO-006","TC-CHKINFO-001, TC-CHKINFO-006",Covered,Pass
+REQ-CHKINFO-004,MOD-05,Checkout — Customer Information,Checkout progression is prevented when required customer information is missing.,SDQA-7,Checkout — Customer Information,"TS-CHKINFO-002, TS-CHKINFO-003, TS-CHKINFO-004, TS-CHKINFO-005, TS-CHKINFO-008, TS-CHKINFO-009","TC-CHKINFO-002, TC-CHKINFO-003, TC-CHKINFO-004, TC-CHKINFO-005, TC-CHKINFO-008, TC-CHKINFO-009",Covered,Pass
+REQ-CHKINFO-005,MOD-05,Checkout — Customer Information,An appropriate validation message is displayed when required information is missing.,SDQA-7,Checkout — Customer Information,"TS-CHKINFO-002, TS-CHKINFO-003, TS-CHKINFO-004, TS-CHKINFO-005, TS-CHKINFO-008, TS-CHKINFO-009","TC-CHKINFO-002, TC-CHKINFO-003, TC-CHKINFO-004, TC-CHKINFO-005, TC-CHKINFO-008, TC-CHKINFO-009",Covered,Pass
+REQ-CHKINFO-006,MOD-05,Checkout — Customer Information,Valid required information allows the user to continue to checkout overview.,SDQA-7,Checkout — Customer Information,TS-CHKINFO-001,TC-CHKINFO-001,Covered,Pass
+REQ-CHKINFO-007,MOD-05,Checkout — Customer Information,Cancel returns the user from checkout information to the shopping cart.,SDQA-7,Checkout — Customer Information,TS-CHKINFO-007,TC-CHKINFO-007,Covered,Pass
+REQ-CHKOV-001,MOD-06,Checkout — Order Overview,The checkout overview displays products included in the order.,SDQA-8,Checkout — Order Overview,TS-CHKOV-001,TC-CHKOV-001,Covered,Pass
+REQ-CHKOV-002,MOD-06,Checkout — Order Overview,The checkout overview displays pricing corresponding to selected products.,SDQA-8,Checkout — Order Overview,TS-CHKOV-002,TC-CHKOV-002,Covered,Pass
+REQ-CHKOV-003,MOD-06,Checkout — Order Overview,The checkout overview displays a correct item subtotal.,SDQA-8,Checkout — Order Overview,"TS-CHKOV-003, TS-CHKOV-005","TC-CHKOV-003, TC-CHKOV-005",Covered,Pass
+REQ-CHKOV-004,MOD-06,Checkout — Order Overview,The checkout overview displays tax separately.,SDQA-8,Checkout — Order Overview,"TS-CHKOV-004, TS-CHKOV-005","TC-CHKOV-004, TC-CHKOV-005",Covered,Pass
+REQ-CHKOV-005,MOD-06,Checkout — Order Overview,The checkout overview displays a final total consistent with subtotal plus tax.,SDQA-8,Checkout — Order Overview,TS-CHKOV-005,TC-CHKOV-005,Covered,Pass
+REQ-CHKOV-006,MOD-06,Checkout — Order Overview,The user can finish the order from checkout overview.,SDQA-8,Checkout — Order Overview,TS-CHKOV-006,TC-CHKOV-006,Covered,Pass
+REQ-CHKOV-007,MOD-06,Checkout — Order Overview,The user can cancel from checkout overview without completing the order.,SDQA-8,Checkout — Order Overview,TS-CHKOV-007,TC-CHKOV-007,Covered,Pass
+REQ-ORDER-001,MOD-07,Order Completion,A dedicated order-completion page is displayed after a valid checkout is finished.,SDQA-9,Order Completion,TS-ORDER-001,TC-ORDER-001,Covered,Pass
+REQ-ORDER-002,MOD-07,Order Completion,Successful order completion is clearly communicated to the user.,SDQA-9,Order Completion,TS-ORDER-002,TC-ORDER-002,Covered,Pass
+REQ-ORDER-003,MOD-07,Order Completion,The user can return to the Products inventory after order completion.,SDQA-9,Order Completion,TS-ORDER-003,TC-ORDER-003,Covered,Pass
+REQ-NAV-001,MOD-08,"Navigation, Menu & Session",An authenticated user can open the application navigation menu.,SDQA-10,"Navigation, Menu and Session",TS-NAV-001,TC-NAV-001,Covered,Pass
+REQ-NAV-002,MOD-08,"Navigation, Menu & Session",All Items navigates the user to the Products inventory.,SDQA-10,"Navigation, Menu and Session",TS-NAV-002,TC-NAV-002,Covered,Pass
+REQ-NAV-003,MOD-08,"Navigation, Menu & Session",About navigates to the configured external destination.,SDQA-10,"Navigation, Menu and Session",TS-NAV-003,TC-NAV-003,Covered,Pass
+REQ-NAV-004,MOD-08,"Navigation, Menu & Session",Reset App State clears the user's current application state.,SDQA-10,"Navigation, Menu and Session",TS-NAV-004,TC-NAV-004,Covered,Pass
+REQ-NAV-005,MOD-08,"Navigation, Menu & Session",An authenticated user can log out successfully.,SDQA-10,"Navigation, Menu and Session",TS-NAV-005,TC-NAV-005,Covered,Pass
+REQ-NAV-006,MOD-08,"Navigation, Menu & Session",A logged-out user cannot regain normal authenticated access without logging in again.,SDQA-10,"Navigation, Menu and Session",TS-NAV-006,TC-NAV-006,Covered,Pass
