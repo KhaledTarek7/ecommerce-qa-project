@@ -592,3 +592,69 @@ The Checkout Order Overview scenarios provide planned coverage for:
 - `REQ-CHKOV-007`
 
 Detailed test cases will provide test data, execution steps, and expected results.
+# MOD-07 — Order Completion
+
+## Scenario Coverage
+
+| Scenario ID | Related Requirement(s) | Test Scenario | Test Type | Priority |
+|---|---|---|---|---|
+| TS-ORDER-001 | REQ-ORDER-001 | Verify that an order-completion page is displayed after finishing a valid checkout. | Positive / Functional | High |
+| TS-ORDER-002 | REQ-ORDER-002 | Verify that successful order completion is clearly communicated to the user. | Positive / Functional | High |
+| TS-ORDER-003 | REQ-ORDER-003 | Verify that the user can return to the Products inventory after completing an order. | Navigation / Functional | Medium |
+
+---
+
+## Scenario Design Rationale
+
+The Order Completion scenarios validate the final stage of the end-to-end purchasing workflow.
+
+### Successful Order Completion
+
+Covered by:
+
+`TS-ORDER-001`  
+`TS-ORDER-002`
+
+### Post-Order Navigation
+
+Covered by:
+
+`TS-ORDER-003`
+
+---
+
+## Test Design Techniques
+
+### Workflow Testing
+
+The complete order workflow is validated across:
+
+Login
+
+→ Products
+
+→ Shopping Cart
+
+→ Checkout Customer Information
+
+→ Checkout Order Overview
+
+→ Finish
+
+→ Order Completion
+
+### Navigation Testing
+
+Post-order navigation is validated to ensure that the user can return to the Products inventory after completing an order.
+
+---
+
+## Requirement Coverage
+
+The Order Completion scenarios provide planned coverage for:
+
+- `REQ-ORDER-001`
+- `REQ-ORDER-002`
+- `REQ-ORDER-003`
+
+Detailed test cases will provide test data, execution steps, and expected results.
