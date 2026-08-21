@@ -658,3 +658,81 @@ The Order Completion scenarios provide planned coverage for:
 - `REQ-ORDER-003`
 
 Detailed test cases will provide test data, execution steps, and expected results.
+# MOD-08 — Navigation, Menu and Session
+
+## Scenario Coverage
+
+| Scenario ID | Related Requirement(s) | Test Scenario | Test Type | Priority |
+|---|---|---|---|---|
+| TS-NAV-001 | REQ-NAV-001 | Verify that an authenticated user can open the application navigation menu. | Positive / Functional | Medium |
+| TS-NAV-002 | REQ-NAV-002 | Verify that All Items navigates the user to the Products inventory. | Navigation / Functional | Medium |
+| TS-NAV-003 | REQ-NAV-003 | Verify that About navigates to the configured external destination. | Navigation / Functional | Medium |
+| TS-NAV-004 | REQ-NAV-004 | Verify that Reset App State clears the user's current application state. | State Transition / Functional | High |
+| TS-NAV-005 | REQ-NAV-005 | Verify that an authenticated user can log out successfully. | Positive / Session | High |
+| TS-NAV-006 | REQ-NAV-006 | Verify that protected application functionality cannot be normally accessed after logout without authenticating again. | Negative / Session | High |
+
+---
+
+## Scenario Design Rationale
+
+The Navigation, Menu and Session scenarios validate application navigation, application-state management, logout behavior, and session termination.
+
+### Application Navigation
+
+Covered by:
+
+`TS-NAV-001`  
+`TS-NAV-002`  
+`TS-NAV-003`
+
+### Application State Management
+
+Covered by:
+
+`TS-NAV-004`
+
+### Session Management
+
+Covered by:
+
+`TS-NAV-005`  
+`TS-NAV-006`
+
+---
+
+## Test Design Techniques
+
+### Navigation Testing
+
+Navigation controls are verified to ensure that each menu action takes the user to the expected destination.
+
+### State Transition Testing
+
+Reset App State validates the transition from a populated application state to a clean state.
+
+Example:
+
+Cart = 2
+
+→ Reset App State
+
+→ Cart = 0
+
+### Negative Testing
+
+After logout, protected authenticated functionality is accessed again intentionally to verify that the terminated session is not restored.
+
+---
+
+## Requirement Coverage
+
+The Navigation, Menu and Session scenarios provide planned coverage for:
+
+- `REQ-NAV-001`
+- `REQ-NAV-002`
+- `REQ-NAV-003`
+- `REQ-NAV-004`
+- `REQ-NAV-005`
+- `REQ-NAV-006`
+
+Detailed test cases will provide test data, execution steps, and expected results.
